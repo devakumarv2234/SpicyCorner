@@ -1,0 +1,118 @@
+:root {
+    --primary-color: #fc7f09;
+    --primary-color-light: #fffcfa;
+    --primary-color-dark: #db6e09;
+    --text-dark: #18181b;
+    --text-light: #6b7280;
+    --white: #ffffff;
+  }
+  
+  *{
+    font-family: "Montagu Slab", sans-serif;
+  }
+body {
+    margin: 0;
+    padding: 0;
+    background-color:var(--primary-color-light);
+  }
+
+  .category {
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 1400px;
+    background: var(--white);
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.384);
+  }
+
+  .category-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+  }
+
+  .card {
+    background:var(--primary-color-light);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center;     /* Vertically centers the content */
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card:hover {
+    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.603);
+    transform: scale(1.05);
+  }
+
+  .card img {
+      width: 50%;               /* Adjust the image width */
+      height: 100px;            /* Set the image height */
+      object-fit: cover;        /* Ensures the image maintains its aspect ratio */
+      display: block;           /* Removes any inline spacing */
+      margin: 0 auto;
+      filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.3));
+  }
+
+  .card-content {
+    padding: 15px;
+  }
+
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color:var(--text-dark);
+  }
+
+  .card-description {
+    font-size: 14px;
+    font-weight: 500;
+    color:var(--text-dark);
+    margin-bottom: 10px;
+  }
+
+  .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+  }
+
+  .offer {
+    font-size: 14px;
+    font-weight: 800;
+    color: rgb(51, 255, 0);
+    margin-bottom: 15px;
+  }
+
+  .buy-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s;
+  }
+
+  .buy-button:hover {
+    background-color: #0056b3;
+  }
+
+  

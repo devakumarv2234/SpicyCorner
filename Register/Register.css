@@ -1,0 +1,115 @@
+:root {
+  --primary-color: #fc7f09;
+  --primary-color-light: #fffcfa;
+  --primary-color-dark: #db6e09;
+  --text-dark: #18181b;
+  --text-light: #6b7280;
+  --white: #ffffff;
+  --max-width: 1400px;
+}
+*{
+    font-family: "Montagu Slab", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-color-light);
+  color: var(--text-dark);
+}
+
+/* Container */
+.register-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(34, 26, 26, 0.719);
+  text-align: center;
+}
+
+/* Header */
+.register-header h1 {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+}
+
+.register-header span {
+  color: #ff5722; /* Highlight color */
+}
+
+/* Form Styles */
+.register-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark)
+}
+
+input {
+  width: 95%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #ff5722;
+}
+
+.error {
+  font-size: 0.8rem;
+  color: red;
+  margin-top: 5px;
+  display: none; /* Default: hidden */
+}
+
+.error-border {
+  border: 1px solid red;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #ff5722;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e64a19;
+}
+
+/* Footer */
+.register-footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.register-footer a {
+  color: #ff5722;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register-footer a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <style>
+    .cart-item {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+    .cart-item h3 {
+      margin: 0;
+    }
+    .cart-item .price {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h1>Your Cart</h1>
+  <div id="cart-items-container">
+    <!-- Cart items will be displayed here -->
+  </div>
+  <script>
+    function displayCart() {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      let cartContainer = document.getElementById('cart-items-container');
+      
+      if (cart.length === 0) {
+        cartContainer.innerHTML = '<p>Your cart is empty.</p>';
+      } else {
+        cart.forEach(item => {
+          let cartItem = document.createElement('div');
+          cartItem.classList.add('cart-item');
+          
+          cartItem.innerHTML = `
+            <h3>${item.name}</h3>
+            <p class="price">₹${item.price} (Offer: ${item.offer}% off)</p>
+          `;
+          
+          cartContainer.appendChild(cartItem);
+        });
+      }
+    }
+
+    // Display cart items when the page loads
+    window.onload = displayCart;
+  </script>
+</body>
+</html>

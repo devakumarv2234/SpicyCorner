@@ -1,0 +1,100 @@
+:root {
+    --primary-color: #fc7f09;
+    --primary-color-light: #fffcfa;
+    --primary-color-dark: #db6e09;
+    --text-dark: #18181b;
+    --text-light: #6b7280;
+    --white: #ffffff;
+    --max-width: 1400px;
+  }
+  
+  *{
+    font-family: "Montagu Slab", sans-serif;
+  }
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .details-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #details-image {
+    height: 250px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for scale effect */
+  }
+  
+  /* Hover effect for the image */
+  #details-image:hover {
+    transform: scale(1.1); /* Enlarge the image by 10% */
+  }
+  
+  /* Title styling */
+  .details-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+  }
+  
+  /* Description styling */
+  .details-description {
+    font-size: 16px;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+  }
+  
+  /* Price styling */
+  .details-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary-color-dark);
+    margin-bottom: 10px;
+  }
+  
+  /* Offer styling */
+  .details-offer {
+    font-size: 17px;
+    font-weight: 500;
+    color: #28a745;
+    margin-bottom: 20px;
+  }
+  
+  /* Back button styling */
+  .back-button {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  
+  

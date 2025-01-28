@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Details</title>
+  <link rel="stylesheet" href="Details.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script>
+    function getQueryParam(param) {
+        const params = new URLSearchParams(window.location.search);
+        return params.get(param);  // Correctly access params
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const name = getQueryParam('name');
+        const description = getQueryParam('description');
+        const price = getQueryParam('price');
+        const discount = getQueryParam('discount');
+        const discountedPrice = getQueryParam('discountedPrice');
+        const imageUrl = getQueryParam('imageUrl');  // Correctly retrieve imageUrl
+
+        document.getElementById('details-title').textContent = name;
+        document.getElementById('details-description').textContent = description;
+        document.getElementById('details-price').textContent = `Original Price: ₹${price}`;
+        document.getElementById('details-offer').textContent = `Discount: ${discount}% | Discounted Price: ₹${discountedPrice}`;
+        document.getElementById('details-image').src = imageUrl;  // Set the image source dynamically
+    });
+</script>
+
+
+</head>
+<body>
+        <div class="details-container">
+          <img id="details-image" alt="Dish Image">
+          <div id="details-title" class="details-title"></div>
+          <div id="details-description" class="details-description"></div>
+          <div id="details-price" class="details-price"></div>
+          <div id="details-offer" class="details-offer"></div>
+          <a href="\Biriyani\Biriyani.html" class="back-button">Back to Menu</a>
+        </div>
+</body>
+</html>
