@@ -327,11 +327,12 @@ nav{
   background-color: var(--primary-color-dark);
 }
 
+
 @media (width > 768px){
   nav{
     position: static;
-    padding: 0.5rem 1rem;
-    max-width:1350px;
+    padding: 2rem 1rem;
+    max-width: var(--max-width);
     margin-inline: auto;
     display: flex;
     align-items: center;
@@ -371,85 +372,4 @@ nav{
     font-size: 1.5rem;
     border-radius: 100%;
   }
-
 }
-@media (max-width: 1024px) {
-  .container {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-  .category {
-    padding: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  /* Stack navigation links vertically */
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .container {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-  }
-
-  .card img {
-    width: 70%;
-    height: auto;
-  }
-
-  .card {
-    padding: 10px;
-  }
-
-  .dropdown-content {
-    width: 100%; /* Full width dropdown */
-  }
-
-  .search-bar {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .search-bar input {
-    width: 100%;
-  }
-
-  .search-bar button {
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Mobile specific adjustments */
-  .category-title {
-    font-size: 22px;
-  }
-
-  .card-title {
-    font-size: 16px;
-  }
-
-  .price {
-    font-size: 18px;
-  }
-
-  .offer {
-    top: 10px;
-    right: 10px;
-    font-size: 9px;
-    padding: 4px 8px;
-  }
-
-  .buy-button {
-    font-size: 12px;
-    padding: 8px 12px;
-  }
-
-  .nav-links {
-    padding: 1.5rem;
-    gap: 1rem;
-  }
-}
-
