@@ -19,7 +19,7 @@ body {
   .category {
     margin: 20px auto;
     padding: 30px;
-    max-width: 1400px;
+    max-width: 1300px;
     background: var(--white);
     
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.384);
@@ -158,11 +158,11 @@ nav{
   
   position: fixed;
   isolation: isolate;
-  width: 100%;
+  
   z-index: 9;
 }
 .nav-header{
-  width: 100%;
+  
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -331,7 +331,7 @@ nav{
   nav{
     position: static;
     padding: 0.5rem 1rem;
-    max-width:1400px;
+    max-width:1350px;
     margin-inline: auto;
     display: flex;
     align-items: center;
@@ -395,7 +395,7 @@ nav{
   }
 
   .card img {
-    width: 80%;
+    width: 70%;
     height: auto;
   }
 
