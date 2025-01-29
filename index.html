@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SpicyCorner</title>
+  <link rel="icon" type="image/png" href="\images\special-1.png">
   <link rel="stylesheet" href="Home page\styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +29,7 @@
       <li><a href="#home">Home</a></li>
       <li><a href="#special">Special</a></li>
       <li><a href="#contact">Contact Us</a></li>
-      <li><a href="\Login\login.html">Login</a></li>
+      <li><a href="\Signin.html">Login</a></li>
       
       <div class="search-bar">
         <input type="text" id="searchInput" placeholder="Search here..." />
@@ -38,8 +39,8 @@
       <div class="dropdown">
         <button class="dropdown-btn">Categories <i class="ri-arrow-down-s-line"></i></button>
         <div class="dropdown-content">
-          <a href="\Biriyani\Biriyani.html" class="category-link" data-category="biriyani">Biriyani</a>
-          <a href="\Cakes\Cakes.html" class="category-link" data-category="cakes">Cakes</a>
+          <a href="Biriyani.html" class="category-link" data-category="biriyani">Biriyani</a>
+          <a href="Cakes.html" class="category-link" data-category="cakes">Cakes</a>
           <a href="#kfc" class="category-link" data-category="kfc">KFC</a>
           <a href="#fried-rice" class="category-link" data-category="fried-rice">Fried Rice</a>
         </div> 
@@ -48,7 +49,7 @@
     
     
     <div class="nav-btn">
-      <button class="btn" onclick="window.location.href='\Home page\cart.html'">
+      <button class="btn" onclick="window.location.href='#'">
         <i class="ri-shopping-bag-fill"></i>
         <span id="cart-item-count">0</span>
       </button>
@@ -60,7 +61,7 @@
 
   <header class="section-container header-container" id="home">
     <div class="header-image">
-      <img src=".\images\header.png" alt="header">
+      <img id="headerImage" src="./images/header.png" alt="header">
     </div>
     <div class="header-content">
       <h1>Meet, Eat & Enjoy The <span>True Taste</span>.</h1>
@@ -73,6 +74,7 @@
       </div>
     </div>
   </header>
+
 
   <section class="section-container special-container" id="special">
     <h2 class="section-header">Our Special Dish</h2>

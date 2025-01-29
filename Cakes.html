@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cakes</title>
+  <link rel="stylesheet" href="\Biriyani\Biriyani.css">
+  <link rel="icon" type="image/png" href="\images\c1.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+  
+  <nav>
+    <div class="nav-header">
+      <div class="logo nav-logo">
+        <a href="#">Spicy<span>Corner</span></a>
+      </div>
+      <div class="nav-menu-btn" id="menu-btn">
+       <span><i class="ri-menu-line"></i></span>
+      </div>
+
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="\index.html">Home</a></li>
+      
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search here..." />
+        <button onclick="searchFunction()">Search</button>
+      </div>
+      
+      <div class="dropdown">
+        <button class="dropdown-btn">Categories <i class="ri-arrow-down-s-line"></i></button>
+        <div class="dropdown-content">
+          <a href="\Biriyani.html" class="category-link" data-category="biriyani">Biriyani</a>
+          <a href="\Cakes.html" class="category-link" data-category="cakes">Cakes</a>
+          <a href="#kfc" class="category-link" data-category="kfc">KFC</a>
+          <a href="#fried-rice" class="category-link" data-category="fried-rice">Fried Rice</a>
+        </div> 
+      </div>
+    </ul>
+    
+    
+    <div class="nav-btn">
+      <button class="btn" onclick="window.location.href='#'">
+        <i class="ri-shopping-bag-fill"></i>
+        <span id="cart-item-count">0</span>
+      </button>
+      
+    </div>
+        
+  </nav>
+
+    <div class="category">
+      <div class="category-title">Cakes <span>Section</span></div>
+      <div class="container">
+    <div class="card" onclick="navigateToDetails('Chocolate Truffle Cake', 'Rich and moist chocolate cake topped with luscious chocolate ganache.', 500, 15, '/images/c1.png')">
+      <img src="./images/c1.png" alt="Chocolate Truffle Cake">
+      <div class="card-content">
+        <div class="card-title">Choco Truffle Cake</div>
+        <div class="card-description">Rich and moist chocolate cake topped with luscious chocolate ganache.</div>
+        <div class="price"><span>Price:</span> ₹500</div>
+        <div class="offer">15% off!</div>
+        <button class="buy-button" onclick="event.stopPropagation(); addToCart('Chocolate Truffle Cake', 500, 15)">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="card" onclick="navigateToDetails('Red Velvet Cake', 'Delicious red velvet layers with a hint of cocoa and creamy frosting.', 600, 20, '/images/c2.png')">
+      <img src="./images/c2.png" alt="Red Velvet Cake">
+      <div class="card-content">
+        <div class="card-title">Red Velvet Cake</div>
+        <div class="card-description">Delicious red velvet layers with a hint of cocoa and creamy frosting.</div>
+        <div class="price"><span>Price:</span> ₹600</div>
+        <div class="offer">20% off!</div>
+        <button class="buy-button" onclick="event.stopPropagation(); addToCart('Red Velvet Cake', 600, 20)">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="card" onclick="navigateToDetails('Black Forest Cake', 'Classic chocolate and vanilla layered cake with whipped cream and cherries.', 550, 10, '/images/c3.png')">
+      <img src="./images/c3.png" alt="Black Forest Cake">
+      <div class="card-content">
+        <div class="card-title">Black Forest Cake</div>
+        <div class="card-description">Classic chocolate and vanilla layered cake with whipped cream and cherries.</div>
+        <div class="price"><span>Price:</span> ₹550</div>
+        <div class="offer">10% off!</div>
+        <button class="buy-button" onclick="event.stopPropagation(); addToCart('Black Forest Cake', 550, 10)">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="card" onclick="navigateToDetails('Pineapple Cake', 'Light and fluffy cake infused with pineapple flavor and topped with cream.', 450, 12, '/images/c4.png')">
+      <img src="./images/c4.png" alt="Pineapple Cake">
+      <div class="card-content">
+        <div class="card-title">Pineapple Cake</div>
+        <div class="card-description">Light and fluffy cake infused with pineapple flavor and topped with cream.</div>
+        <div class="price"><span>Price:</span> ₹450</div>
+        <div class="offer">12% off!</div>
+        <button class="buy-button" onclick="event.stopPropagation(); addToCart('Pineapple Cake', 450, 12)">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="card" onclick="navigateToDetails('Cheesecake', 'Rich and creamy cheesecake with a buttery biscuit crust.', 700, 10, '/images/c5.png')">
+      <img src="./images/c5.png" alt="Cheesecake">
+      <div class="card-content">
+        <div class="card-title">Cheesecake</div>
+        <div class="card-description">Rich and creamy cheesecake with a buttery biscuit crust and tasty..</div>
+        <div class="price"><span>Price:</span> ₹700</div>
+        <div class="offer">10% off!</div>
+        <button class="buy-button" onclick="event.stopPropagation(); addToCart('Cheesecake', 700, 10)">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="card" onclick="navigateToDetails('Chocolate Fudge Cake', 'A decadent chocolate cake with rich fudge layers and creamy frosting.', 520, 10, '/images/c6.png')">
+      <img src="./images/c6.png" alt="Chocolate Fudge Cake">
+      <div class="card-content">
+        <div class="card-title">Chocolate Fudge Cake</div>
+        <div class="card-description">A decadent chocolate cake with rich fudge layers and creamy frosting.</div>
+        <div class="price"><span>Price:</span> ₹520</div>
+        <div class="offer">10% off!</div>
+        <button class="buy-button" onclick="event.stopPropagation(); addToCart('Chocolate Fudge Cake', 520, 10)">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Coffee Walnut Cake -->
+    <div class="card" onclick="navigateToDetails('Coffee Walnut Cake', 'A moist cake infused with coffee flavor and topped with crunchy walnuts.', 480, 12, '/images/c7.png')">
+      <img src="./images/c7.png" alt="Coffee Walnut Cake">
+      <div class="card-content">
+        <div class="card-title">Coffee Walnut Cake</div>
+        <div class="card-description">A moist cake infused with coffee flavor and topped with crunchy walnuts.</div>
+        <div class="price"><span>Price:</span> ₹480</div>
+        <div class="offer">12% off!</div>
+        <button class="buy-button" onclick="event.stopPropagation(); addToCart('Coffee Walnut Cake', 480, 12)">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Mango Cheesecake -->
+    <div class="card" onclick="navigateToDetails('Mango Cheesecake', 'A creamy cheesecake topped with fresh mango slices.', 650, 15, '/images/c8.png')">
+      <img src="./images/c8.png" alt="Mango Cheesecake">
+      <div class="card-content">
+        <div class="card-title">Mango Cheesecake</div>
+        <div class="card-description">A creamy cheesecake topped with fresh mango slices and with mango creemy.</div>
+        <div class="price"><span>Price:</span> ₹650</div>
+        <div class="offer">15% off!</div>
+        <button class="buy-button" onclick="event.stopPropagation(); addToCart('Mango Cheesecake', 650, 15)">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Carrot Walnut Cake -->
+    <div class="card" onclick="navigateToDetails('Carrot Walnut Cake', 'A healthy and delicious cake made with fresh carrots and walnuts.', 500, 10, '/images/c9.png')">
+      <img src="./images/c9.png" alt="Carrot Walnut Cake">
+      <div class="card-content">
+        <div class="card-title">Carrot Walnut Cake</div>
+        <div class="card-description">A healthy and delicious cake made with fresh carrots and walnuts.</div>
+        <div class="price"><span>Price:</span> ₹500</div>
+        <div class="offer">10% off!</div>
+        <button class="buy-button" onclick="event.stopPropagation(); addToCart('Carrot Walnut Cake', 500, 10)">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Tiramisu Cake -->
+    <div class="card" onclick="navigateToDetails('Tiramisu Cake', 'A classic Italian dessert with layers of coffee-soaked sponge and mascarpone cream.', 750, 15, '/images/c10.png')">
+      <img src="./images/c10.png" alt="Tiramisu Cake">
+      <div class="card-content">
+        <div class="card-title">Tiramisu Cake</div>
+        <div class="card-description">A classic Italian dessert with layers of coffee-soaked sponge.</div>
+        <div class="price"><span>Price:</span> ₹750</div>
+        <div class="offer">15% off!</div>
+        <button class="buy-button" onclick="event.stopPropagation(); addToCart('Tiramisu Cake', 750, 15)">Buy Now</button>
+      </div>
+    </div>
+    <!-- Strawberry Shortcake -->
+    <div class="card" onclick="navigateToDetails('Strawberry Shortcake', 'A light sponge cake layered with fresh strawberries and whipped cream.', 550, 10, '/images/c11.png')">
+        <img src="./images/c11.png" alt="Strawberry Shortcake">
+        <div class="card-content">
+          <div class="card-title">Strawberry Shortcake</div>
+          <div class="card-description">A light sponge cake layered with fresh strawberries and whipped cream.</div>
+          <div class="price"><span>Price:</span> ₹550</div>
+          <div class="offer">10% off!</div>
+          <button class="buy-button" onclick="event.stopPropagation(); addToCart('Strawberry Shortcake', 550, 10)">Buy Now</button>
+        </div>
+      </div>
+  </div>
+</div>
+    
+
+  
+      <script>
+        function addToCart(productName, price, discount) {
+          const discountedPrice = price - (price * discount) / 100;
+          let itemCount = parseInt(localStorage.getItem('itemCount')) || 0;
+          let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+      
+          // Add the item to the cart
+          itemCount++;
+          cartItems.push({ productName, discountedPrice });
+      
+          // Save the updated item count and items back to localStorage
+          localStorage.setItem('itemCount', itemCount);
+          localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      
+          // Show the added item in an alert (optional)
+          alert(`${productName} added to cart!`);
+      
+          // Update cart on the home page
+          updateCart();
+        }
+        
+function updateCart() {
+  // Retrieve the item count from localStorage
+  const itemCount = parseInt(localStorage.getItem('itemCount')) || 0;
+
+  // Get the cart item count element
+  const cartItemCountElement = document.querySelector('.nav-btn .btn span');
+
+  // Update the cart item count (show only the number, no "items")
+  cartItemCountElement.textContent = itemCount;
+}
+
+// Update cart on page load
+window.onload = updateCart;
+      </script>
+      
+      
+      
+      
+
+</body>
+</html>

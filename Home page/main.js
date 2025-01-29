@@ -1,3 +1,27 @@
+// const headerImages = [
+//   './images/header.png',       // Original header image
+//   './images/.png',    // Third image
+//   './images/.png'     // Fourth image
+// ];
+// let currentImageIndex = 0;
+
+// function changeHeaderImage() {
+//   const headerImageElement = document.getElementById('headerImage');
+
+//   // Fade out the current image
+//   headerImageElement.style.opacity = '0';
+
+//   // After fade-out, change the image and fade back in
+//   setTimeout(() => {
+//     currentImageIndex = (currentImageIndex + 1) % headerImages.length; // Loop through images
+//     headerImageElement.src = headerImages[currentImageIndex];
+//     headerImageElement.style.opacity = '1'; // Fade back in
+//   }, 500); // Matches the transition duration in CSS
+// }
+
+// // Change the image every 5 seconds
+// setInterval(changeHeaderImage, 5000);
+
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");

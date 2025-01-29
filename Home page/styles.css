@@ -231,11 +231,13 @@ nav{
   gap: 2rem;
   overflow: hidden;
 }
-.header-image img{
+.header-image img {
+  transition: opacity 0.5s ease-in-out; /* Smooth fade effect */
   max-width: 600px;
   margin-inline: auto;
-
+  display: block; /* Ensures proper centering */
 }
+
 .header-content h1{
   margin-bottom: 1rem;
   font-size: 3.5rem;

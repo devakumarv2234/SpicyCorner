@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Biryani</title>
-  <link rel="stylesheet" href="Biriyani.css">
+  <link rel="stylesheet" href="Biriyani\Biriyani.css">
+  <link rel="icon" type="image/png" href="\images\special-1.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -16,88 +17,128 @@
 </head>
 <body>
 
+  <nav>
+    <div class="nav-header">
+      <div class="logo nav-logo">
+        <a href="#">Spicy<span>Corner</span></a>
+      </div>
+      <div class="nav-menu-btn" id="menu-btn">
+       <span><i class="ri-menu-line"></i></span>
+      </div>
+
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="\index.html">Home</a></li>
+      
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search here..." />
+        <button onclick="searchFunction()">Search</button>
+      </div>
+      
+      <div class="dropdown">
+        <button class="dropdown-btn">Categories <i class="ri-arrow-down-s-line"></i></button>
+        <div class="dropdown-content">
+          <a href="\Biriyani.html" class="category-link" data-category="biriyani">Biriyani</a>
+          <a href="\Cakes.html" class="category-link" data-category="cakes">Cakes</a>
+          <a href="#kfc" class="category-link" data-category="kfc">KFC</a>
+          <a href="#fried-rice" class="category-link" data-category="fried-rice">Fried Rice</a>
+        </div> 
+      </div>
+    </ul>
+    
+    
+    <div class="nav-btn">
+      <button class="btn" onclick="window.location.href='/Home page/cart.html'">
+        <i class="ri-shopping-bag-fill"></i>
+        <span id="cart-item-count">0</span>
+      </button>
+      
+    </div>
+        
+  </nav>
+
   <!-- Chicken Biryani Section -->
   <div class="category">
-    <div class="category-title">Chicken Biryani</div>
+    <div class="category-title">Chicken <span>Section</span></div>
     <div class="container">
         <div class="card" onclick="navigateToDetails('Hyderabadi Chicken Biryani', 'A royal dum biryani with tender chicken and aromatic spices.', 350, 10, '/images/special-1.png')">
-            <img src="/images/special-1.png" alt="Hyderabadi Chicken Biryani">
+            <img src="./images/special-1.png" alt="Hyderabadi Chicken Biryani">
             <div class="card-content">
               <div class="card-title">Hyderabadi Chicken Biryani</div>
               <div class="card-description">A royal dum biryani with tender chicken and aromatic spices.</div>
-              <div class="price">Price: ₹350</div>
-              <div class="offer">Offer: 10% off!</div>
-          <button class="buy-button" onclick="addToCart('Hyderabadi Chicken Biryani', 350, 10)">Buy Now</button>
+              <div class="price"><span>Price:</span> ₹350</div>
+              <div class="offer"> 10% off!</div>
+          <button class="buy-button" onclick="event.stopPropagation(); addToCart('Hyderabadi Chicken Biryani', 350, 10)">Buy Now</button>
         </div>
         </div>
       <div class="card" onclick="navigateToDetails('Hyderabadi Chicken Biryani', 'A royal dum biryani with tender chicken and aromatic spices.', 350, 10, '/images/special-1.png')">
-        <img src="/images/special-1.png" alt="Hyderabadi Chicken Biryani">
+        <img src="./images/special-1.png" alt="Hyderabadi Chicken Biryani">
         <div class="card-content">
           <div class="card-title">Hyderabadi Chicken Biryani</div>
           <div class="card-description">A royal dum biryani with tender chicken and aromatic spices.</div>
-          <div class="price">Price: ₹350</div>
-          <div class="offer">Offer: 10% off!</div>
-      <button class="buy-button" onclick="addToCart('Hyderabadi Chicken Biryani', 350, 10)">Buy Now</button>
+          <div class="price"><span>Price:</span> ₹350</div>
+          <div class="offer"> 10% off!</div>
+      <button class="buy-button" onclick="event.stopPropagation(); addToCart('Hyderabadi Chicken Biryani', 350, 10)">Buy Now</button>
     </div>
     </div>
   <div class="card" onclick="navigateToDetails('Hyderabadi Chicken Biryani', 'A royal dum biryani with tender chicken and aromatic spices.', 350, 10, '/images/special-1.png')">
-    <img src="/images/special-1.png" alt="Hyderabadi Chicken Biryani">
+    <img src="./images/special-1.png" alt="Hyderabadi Chicken Biryani">
     <div class="card-content">
       <div class="card-title">Hyderabadi Chicken Biryani</div>
       <div class="card-description">A royal dum biryani with tender chicken and aromatic spices.</div>
-      <div class="price">Price: ₹350</div>
-      <div class="offer">Offer: 10% off!</div>
-  <button class="buy-button" onclick="addToCart('Hyderabadi Chicken Biryani', 350, 10)">Buy Now</button>
+      <div class="price"><span>Price:</span> ₹350</div>
+      <div class="offer"> 10% off!</div>
+  <button class="buy-button" onclick="event.stopPropagation(); addToCart('Hyderabadi Chicken Biryani', 350, 10)">Buy Now</button>
 </div>
 </div>
   <div class="card" onclick="navigateToDetails('Hyderabadi Chicken Biryani', 'A royal dum biryani with tender chicken and aromatic spices.', 350, 10, '/images/special-1.png')">
-    <img src="/images/special-1.png" alt="Hyderabadi Chicken Biryani">
+    <img src="./images/special-1.png" alt="Hyderabadi Chicken Biryani">
     <div class="card-content">
       <div class="card-title">Hyderabadi Chicken Biryani</div>
       <div class="card-description">A royal dum biryani with tender chicken and aromatic spices.</div>
-      <div class="price">Price: ₹350</div>
-      <div class="offer">Offer: 10% off!</div>
-  <button class="buy-button" onclick="addToCart('Hyderabadi Chicken Biryani', 350, 10)">Buy Now</button>
+      <div class="price"><span>Price:</span> ₹350</div>
+      <div class="offer"> 10% off!</div>
+  <button class="buy-button" onclick="event.stopPropagation(); addToCart('Hyderabadi Chicken Biryani', 350, 10)">Buy Now</button>
 </div>
 </div>
 <div class="card" onclick="navigateToDetails('Hyderabadi Chicken Biryani', 'A royal dum biryani with tender chicken and aromatic spices.', 350, 10, '/images/special-1.png')">
-    <img src="/images/special-1.png" alt="Hyderabadi Chicken Biryani">
+    <img src="./images/special-1.png" alt="Hyderabadi Chicken Biryani">
     <div class="card-content">
       <div class="card-title">Hyderabadi Chicken Biryani</div>
       <div class="card-description">A royal dum biryani with tender chicken and aromatic spices.</div>
-      <div class="price">Price: ₹350</div>
-      <div class="offer">Offer: 10% off!</div>
-  <button class="buy-button" onclick="addToCart('Hyderabadi Chicken Biryani', 350, 10)">Buy Now</button>
+      <div class="price"><span>Price:</span> ₹350</div>
+      <div class="offer"> 10% off!</div>
+  <button class="buy-button" onclick="event.stopPropagation(); addToCart('Hyderabadi Chicken Biryani', 350, 10)">Buy Now</button>
 </div>
 </div>
 <div class="card" onclick="navigateToDetails('Hyderabadi Chicken Biryani', 'A royal dum biryani with tender chicken and aromatic spices.', 350, 10, '/images/special-1.png')">
-    <img src="/images/special-1.png" alt="Hyderabadi Chicken Biryani">
+    <img src="./images/special-1.png" alt="Hyderabadi Chicken Biryani">
     <div class="card-content">
       <div class="card-title">Hyderabadi Chicken Biryani</div>
       <div class="card-description">A royal dum biryani with tender chicken and aromatic spices.</div>
-      <div class="price">Price: ₹350</div>
-      <div class="offer">Offer: 10% off!</div>
-  <button class="buy-button" onclick="addToCart('Hyderabadi Chicken Biryani', 350, 10)">Buy Now</button>
+      <div class="price"><span>Price:</span> ₹350</div>
+      <div class="offer"> 10% off!</div>
+  <button class="buy-button" onclick="event.stopPropagation(); addToCart('Hyderabadi Chicken Biryani', 350, 10)">Buy Now</button>
 </div>
 </div>
 <div class="card" onclick="navigateToDetails('Hyderabadi Chicken Biryani', 'A royal dum biryani with tender chicken and aromatic spices.', 350, 10, '/images/special-1.png')">
-    <img src="/images/special-1.png" alt="Hyderabadi Chicken Biryani">
+    <img src="./images/special-1.png" alt="Hyderabadi Chicken Biryani">
     <div class="card-content">
       <div class="card-title">Hyderabadi Chicken Biryani</div>
       <div class="card-description">A royal dum biryani with tender chicken and aromatic spices.</div>
-      <div class="price">Price: ₹350</div>
-      <div class="offer">Offer: 10% off!</div>
-  <button class="buy-button" onclick="addToCart('Hyderabadi Chicken Biryani', 350, 10)">Buy Now</button>
+      <div class="price"><span>Price:</span> ₹350</div>
+      <div class="offer"> 10% off!</div>
+  <button class="buy-button" onclick="event.stopPropagation(); addToCart('Hyderabadi Chicken Biryani', 350, 10)">Buy Now</button>
 </div>
 </div>
 <div class="card" onclick="navigateToDetails('Hyderabadi Chicken Biryani', 'A royal dum biryani with tender chicken and aromatic spices.', 350, 10, '/images/special-1.png')">
-    <img src="/images/special-1.png" alt="Hyderabadi Chicken Biryani">
+    <img src="./images/special-1.png" alt="Hyderabadi Chicken Biryani">
     <div class="card-content">
       <div class="card-title">Hyderabadi Chicken Biryani</div>
       <div class="card-description">A royal dum biryani with tender chicken and aromatic spices.</div>
-      <div class="price">Price: ₹350</div>
-      <div class="offer">Offer: 10% off!</div>
-  <button class="buy-button" onclick="addToCart('Hyderabadi Chicken Biryani', 350, 10)">Buy Now</button>
+      <div class="price"><span>Price:</span> ₹350</div>
+      <div class="offer"> 10% off!</div>
+  <button class="buy-button" onclick="event.stopPropagation(); addToCart('Hyderabadi Chicken Biryani', 350, 10)">Buy Now</button>
 </div>
 </div>
     </div>
@@ -107,93 +148,93 @@
   
   <!-- Mutton Biryani Section -->
   <div class="category">
-    <div class="category-title">Mutton Biryani</div>
+    <div class="category-title">Mutton <span>Section</span></div>
     <div class="container">
         <div class="card" onclick="navigateToDetails('Rajasthani Mutton Curry', 'A spicy and flavorful curry with tender mutton cooked in traditional Rajasthani spices.', 500, 15, '/images/special-1.png')">
-            <img src="/images/special-1.png" alt="Rajasthani Mutton Curry">
+            <img src="./images/special-1.png" alt="Rajasthani Mutton Curry">
             <div class="card-content">
               <div class="card-title">Rajasthani Mutton Curry</div>
               <div class="card-description">A spicy and flavorful curry with tender mutton cooked in traditional Rajasthani spices.</div>
-              <div class="price">Price: ₹500</div>
-              <div class="offer">Offer: 15% off!</div>
-              <button class="buy-button" onclick="addToCart('Rajasthani Mutton Curry', 500, 15)">Buy Now</button>
+              <div class="price"><span>Price:</span> ₹500</div>
+              <div class="offer"> 15% off!</div>
+              <button class="buy-button" onclick="event.stopPropagation(); addToCart('Rajasthani Mutton Curry', 500, 15)">Buy Now</button>
             </div>
           </div>
           
           <div class="card" onclick="navigateToDetails('Chettinad Mutton Biryani', 'A delicious South Indian biryani made with aromatic spices and succulent mutton.', 550, 20,'/images/special-1.png')">
-            <img src="/images/special-1.png" alt="Chettinad Mutton Biryani">
+            <img src="./images/special-1.png" alt="Chettinad Mutton Biryani">
             <div class="card-content">
               <div class="card-title">Chettinad Mutton Biryani</div>
               <div class="card-description">A delicious South Indian biryani made with aromatic spices and succulent mutton.</div>
-              <div class="price">Price: ₹550</div>
-              <div class="offer">Offer: 20% off!</div>
-              <button class="buy-button" onclick="addToCart('Chettinad Mutton Biryani', 550, 20)">Buy Now</button>
+              <div class="price"><span>Price:</span> ₹550</div>
+              <div class="offer"> 20% off!</div>
+              <button class="buy-button" onclick="event.stopPropagation(); addToCart('Chettinad Mutton Biryani', 550, 20)">Buy Now</button>
             </div>
           </div>
           
           <div class="card" onclick="navigateToDetails('Mutton Rogan Josh', 'An authentic Kashmiri dish featuring slow-cooked mutton in a rich and fragrant gravy.', 600, 10, '/images/special-1.png')">
-            <img src="/images/special-1.png" alt="Mutton Rogan Josh">
+            <img src="./images/special-1.png" alt="Mutton Rogan Josh">
             <div class="card-content">
               <div class="card-title">Mutton Rogan Josh</div>
               <div class="card-description">An authentic Kashmiri dish featuring slow-cooked mutton in a rich and fragrant gravy.</div>
-              <div class="price">Price: ₹600</div>
-              <div class="offer">Offer: 10% off!</div>
-              <button class="buy-button" onclick="addToCart('Mutton Rogan Josh', 600, 10)">Buy Now</button>
+              <div class="price"><span>Price:</span> ₹600</div>
+              <div class="offer"> 10% off!</div>
+              <button class="buy-button" onclick="event.stopPropagation(); addToCart('Mutton Rogan Josh', 600, 10)">Buy Now</button>
             </div>
           </div>
           
           <div class="card" onclick="navigateToDetails('Hyderabadi Mutton Korma', 'A rich and creamy curry with tender mutton, cooked in Hyderabadi style.', 650, 25,'/images/special-1.png')">
-            <img src="/images/special-1.png" alt="Hyderabadi Mutton Korma">
+            <img src="./images/special-1.png" alt="Hyderabadi Mutton Korma">
             <div class="card-content">
               <div class="card-title">Hyderabadi Mutton Korma</div>
               <div class="card-description">A rich and creamy curry with tender mutton, cooked in Hyderabadi style.</div>
-              <div class="price">Price: ₹650</div>
-              <div class="offer">Offer: 25% off!</div>
-              <button class="buy-button" onclick="addToCart('Hyderabadi Mutton Korma', 650, 25)">Buy Now</button>
+              <div class="price"><span>Price:</span> ₹650</div>
+              <div class="offer"> 25% off!</div>
+              <button class="buy-button" onclick="event.stopPropagation(); addToCart('Hyderabadi Mutton Korma', 650, 25)">Buy Now</button>
             </div>
           </div>
           
           <div class="card" onclick="navigateToDetails('Mutton Seekh Kebab', 'Delicious skewers of minced mutton, grilled to perfection with spices.', 400, 15,'/images/special-1.png')">
-            <img src="/images/special-1.png" alt="Mutton Seekh Kebab">
+            <img src="./images/special-1.png" alt="Mutton Seekh Kebab">
             <div class="card-content">
               <div class="card-title">Mutton Seekh Kebab</div>
               <div class="card-description">Delicious skewers of minced mutton, grilled to perfection with spices.</div>
-              <div class="price">Price: ₹400</div>
-              <div class="offer">Offer: 15% off!</div>
-              <button class="buy-button" onclick="addToCart('Mutton Seekh Kebab', 400, 15)">Buy Now</button>
+              <div class="price"><span>Price:</span> ₹400</div>
+              <div class="offer"> 15% off!</div>
+              <button class="buy-button" onclick="event.stopPropagation(); addToCart('Mutton Seekh Kebab', 400, 15)">Buy Now</button>
             </div>
           </div>
           
           <div class="card" onclick="navigateToDetails('Mutton Shami Kebab', 'Succulent mutton kebabs, spiced and shallow fried to perfection.', 450, 10,'/images/special-1.png')">
-            <img src="/images/special-1.png" alt="Mutton Shami Kebab">
+            <img src="./images/special-1.png" alt="Mutton Shami Kebab">
             <div class="card-content">
               <div class="card-title">Mutton Shami Kebab</div>
               <div class="card-description">Succulent mutton kebabs, spiced and shallow fried to perfection.</div>
-              <div class="price">Price: ₹450</div>
-              <div class="offer">Offer: 10% off!</div>
-              <button class="buy-button" onclick="addToCart('Mutton Shami Kebab', 450, 10)">Buy Now</button>
+              <div class="price"><span>Price:</span> ₹450</div>
+              <div class="offer"> 10% off!</div>
+              <button class="buy-button" onclick="event.stopPropagation(); addToCart('Mutton Shami Kebab', 450, 10)">Buy Now</button>
             </div>
           </div>
           
           <div class="card" onclick="navigateToDetails('Mutton Keema', 'Spicy mutton mince cooked with aromatic spices and served with naan.', 350, 20, '/images/special-1.png')">
-            <img src="/images/special-1.png" alt="Mutton Keema">
+            <img src="./images/special-1.png" alt="Mutton Keema">
             <div class="card-content">
               <div class="card-title">Mutton Keema</div>
               <div class="card-description">Spicy mutton mince cooked with aromatic spices and served with naan.</div>
-              <div class="price">Price: ₹350</div>
-              <div class="offer">Offer: 20% off!</div>
-              <button class="buy-button" onclick="addToCart('Mutton Keema', 350, 20)">Buy Now</button>
+              <div class="price"><span>Price:</span> ₹350</div>
+              <div class="offer"> 20% off!</div>
+              <button class="buy-button" onclick="event.stopPropagation(); addToCart('Mutton Keema', 350, 20)">Buy Now</button>
             </div>
           </div>
           
           <div class="card" onclick="navigateToDetails('Mutton Pulao', 'Fragrant rice cooked with mutton, flavored with aromatic spices and herbs.', 500, 15, '/images/special-1.png')">
-            <img src="/images/special-1.png" alt="Mutton Pulao">
+            <img src="./images/special-1.png" alt="Mutton Pulao">
             <div class="card-content">
               <div class="card-title">Mutton Pulao</div>
               <div class="card-description">Fragrant rice cooked with mutton, flavored with aromatic spices and herbs.</div>
-              <div class="price">Price: ₹500</div>
-              <div class="offer">Offer: 15% off!</div>
-              <button class="buy-button" onclick="addToCart('Mutton Pulao', 500, 15)">Buy Now</button>
+              <div class="price"><span>Price:</span> ₹500</div>
+              <div class="offer"> 15% off!</div>
+              <button class="buy-button" onclick="event.stopPropagation(); addToCart('Mutton Pulao', 500, 15)">Buy Now</button>
             </div>
           </div>
           
@@ -203,93 +244,93 @@
   
   <!-- fish Biryani Section -->
   <div class="category">
-  <div class="category-title">Fish Biryani</div>
+  <div class="category-title">Fish <span>Section</span></div>
   <div class="container">
   <div class="card" onclick="navigateToDetails('Goan Fish Curry', 'A tangy and spicy curry with fresh fish cooked in traditional Goan spices.', 450, 15,'/images/special-1.png')">
-    <img src="/images/special-1.png" alt="Goan Fish Curry">
+    <img src="./images/special-1.png" alt="Goan Fish Curry">
     <div class="card-content">
       <div class="card-title">Goan Fish Curry</div>
       <div class="card-description">A tangy and spicy curry with fresh fish cooked in traditional Goan spices.</div>
-      <div class="price">Price: ₹450</div>
-      <div class="offer">Offer: 15% off!</div>
-      <button class="buy-button" onclick="addToCart('Goan Fish Curry', 450, 15)">Buy Now</button>
+      <div class="price"><span>Price:</span> ₹450</div>
+      <div class="offer"> 15% off!</div>
+      <button class="buy-button" onclick="event.stopPropagation(); addToCart('Goan Fish Curry', 450, 15)">Buy Now</button>
     </div>
   </div>
   
   <div class="card" onclick="navigateToDetails('Malabar Fish Curry', 'A creamy coconut-based curry with fish, popular in Malabar cuisine.', 500, 20, '/images/special-1.png')">
-    <img src="/images/special-1.png" alt="Malabar Fish Curry">
+    <img src="./images/special-1.png" alt="Malabar Fish Curry">
     <div class="card-content">
       <div class="card-title">Malabar Fish Curry</div>
       <div class="card-description">A creamy coconut-based curry with fish, popular in Malabar cuisine.</div>
-      <div class="price">Price: ₹500</div>
-      <div class="offer">Offer: 20% off!</div>
-      <button class="buy-button" onclick="addToCart('Malabar Fish Curry', 500, 20)">Buy Now</button>
+      <div class="price"><span>Price:</span> ₹500</div>
+      <div class="offer"> 20% off!</div>
+      <button class="buy-button" onclick="event.stopPropagation(); addToCart('Malabar Fish Curry', 500, 20)">Buy Now</button>
     </div>
   </div>
   
   <div class="card" onclick="navigateToDetails('Fish Tikka', 'Juicy fish marinated in aromatic spices and grilled to perfection.', 350, 10, '/images/special-1.png')">
-    <img src="/images/special-1.png" alt="Fish Tikka">
+    <img src="./images/special-1.png" alt="Fish Tikka">
     <div class="card-content">
       <div class="card-title">Fish Tikka</div>
       <div class="card-description">Juicy fish marinated in aromatic spices and grilled to perfection.</div>
-      <div class="price">Price: ₹350</div>
-      <div class="offer">Offer: 10% off!</div>
-      <button class="buy-button" onclick="addToCart('Fish Tikka', 350, 10)">Buy Now</button>
+      <div class="price"><span>Price:</span> ₹350</div>
+      <div class="offer"> 10% off!</div>
+      <button class="buy-button" onclick="event.stopPropagation(); addToCart('Fish Tikka', 350, 10)">Buy Now</button>
     </div>
   </div>
   
   <div class="card" onclick="navigateToDetails('Keralan Fish Fry', 'Deep-fried fish marinated with a spicy blend of Kerala’s unique spices.', 400, 15, '/images/special-1.png')">
-    <img src="/images/special-1.png" alt="Keralan Fish Fry">
+    <img src="./images/special-1.png" alt="Keralan Fish Fry">
     <div class="card-content">
       <div class="card-title">Keralan Fish Fry</div>
       <div class="card-description">Deep-fried fish marinated with a spicy blend of Kerala’s unique spices.</div>
-      <div class="price">Price: ₹400</div>
-      <div class="offer">Offer: 15% off!</div>
-      <button class="buy-button" onclick="addToCart('Keralan Fish Fry', 400, 15)">Buy Now</button>
+      <div class="price"><span>Price:</span> ₹400</div>
+      <div class="offer"> 15% off!</div>
+      <button class="buy-button" onclick="event.stopPropagation(); addToCart('Keralan Fish Fry', 400, 15)">Buy Now</button>
     </div>
   </div>
   
   <div class="card" onclick="navigateToDetails('Fish Amritsari', 'A crispy and spicy fish preparation from Amritsar, perfect for a snack or main dish.', 380, 20, '/images/special-1.png')">
-    <img src="/images/special-1.png" alt="Fish Amritsari">
+    <img src="./images/special-1.png" alt="Fish Amritsari">
     <div class="card-content">
       <div class="card-title">Fish Amritsari</div>
       <div class="card-description">A crispy and spicy fish preparation from Amritsar, perfect for a snack or main dish.</div>
-      <div class="price">Price: ₹380</div>
-      <div class="offer">Offer: 20% off!</div>
-      <button class="buy-button" onclick="addToCart('Fish Amritsari', 380, 20)">Buy Now</button>
+      <div class="price"><span>Price:</span> ₹380</div>
+      <div class="offer"> 20% off!</div>
+      <button class="buy-button" onclick="event.stopPropagation(); addToCart('Fish Amritsari', 380, 20)">Buy Now</button>
     </div>
   </div>
   
   <div class="card" onclick="navigateToDetails('Macher Jhol', 'A Bengali-style fish curry cooked with potatoes and spices in a light broth.', 450, 10, '/images/special-1.png')">
-    <img src="/images/special-1.png" alt="Macher Jhol">
+    <img src="./images/special-1.png" alt="Macher Jhol">
     <div class="card-content">
       <div class="card-title">Macher Jhol</div>
       <div class="card-description">A Bengali-style fish curry cooked with potatoes and spices in a light broth.</div>
-      <div class="price">Price: ₹450</div>
-      <div class="offer">Offer: 10% off!</div>
-      <button class="buy-button" onclick="addToCart('Macher Jhol', 450, 10)">Buy Now</button>
+      <div class="price"><span>Price:</span> ₹450</div>
+      <div class="offer"> 10% off!</div>
+      <button class="buy-button" onclick="event.stopPropagation(); addToCart('Macher Jhol', 450, 10)">Buy Now</button>
     </div>
   </div>
   
   <div class="card" onclick="navigateToDetails('Fish Moilee', 'A mild and flavorful fish curry with coconut milk and a blend of South Indian spices.', 550, 15,'/images/special-1.png')">
-    <img src="/images/special-1.png" alt="Fish Moilee">
+    <img src="./images/special-1.png" alt="Fish Moilee">
     <div class="card-content">
       <div class="card-title">Fish Moilee</div>
       <div class="card-description">A mild and flavorful fish curry with coconut milk and a blend of South Indian spices.</div>
-      <div class="price">Price: ₹550</div>
-      <div class="offer">Offer: 15% off!</div>
-      <button class="buy-button" onclick="addToCart('Fish Moilee', 550, 15)">Buy Now</button>
+      <div class="price"><span>Price:</span> ₹550</div>
+      <div class="offer"> 15% off!</div>
+      <button class="buy-button" onclick="event.stopPropagation(); addToCart('Fish Moilee', 550, 15)">Buy Now</button>
     </div>
   </div>
   
   <div class="card" onclick="navigateToDetails('Bombil Fry', 'Bombil (Bombay Duck) coated with spices and deep-fried, a popular dish from Mumbai.', 300, 20, '/images/special-1.png')">
-    <img src="/images/special-1.png" alt="Bombil Fry">
+    <img src="./images/special-1.png" alt="Bombil Fry">
     <div class="card-content">
       <div class="card-title">Bombil Fry</div>
       <div class="card-description">Bombil (Bombay Duck) coated with spices and deep-fried, a popular dish from Mumbai.</div>
-      <div class="price">Price: ₹300</div>
-      <div class="offer">Offer: 20% off!</div>
-      <button class="buy-button" onclick="addToCart('Bombil Fry', 300, 20)">Buy Now</button>
+      <div class="price"><span>Price:</span> ₹300</div>
+      <div class="offer"> 20% off!</div>
+      <button class="buy-button" onclick="event.stopPropagation(); addToCart('Bombil Fry', 300, 20)">Buy Now</button>
     </div>
 </div>
 </div>
@@ -302,6 +343,41 @@
         const detailsURL = `details.html?name=${encodeURIComponent(name)}&description=${encodeURIComponent(description)}&price=${price}&discount=${discount}&discountedPrice=${discountedPrice.toFixed(2)}&imageUrl=${encodeURIComponent(imageUrl)}`;
         window.location.href = detailsURL;
     }
+
+    function addToCart(productName, price, discount) {
+      const discountedPrice = price - (price * discount) / 100;
+      let itemCount = parseInt(localStorage.getItem('itemCount')) || 0;
+      let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+  
+      // Add the item to the cart
+      itemCount++;
+      cartItems.push({ productName, discountedPrice });
+  
+      // Save the updated item count and items back to localStorage
+      localStorage.setItem('itemCount', itemCount);
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  
+      // Show the added item in an alert (optional)
+      alert(`${productName} added to cart!`);
+  
+      // Update cart on the home page
+      updateCart();
+    }
+
+    
+function updateCart() {
+  // Retrieve the item count from localStorage
+  const itemCount = parseInt(localStorage.getItem('itemCount')) || 0;
+
+  // Get the cart item count element
+  const cartItemCountElement = document.querySelector('.nav-btn .btn span');
+
+  // Update the cart item count (show only the number, no "items")
+  cartItemCountElement.textContent = itemCount;
+}
+
+// Update cart on page load
+window.onload = updateCart;
 </script>
 
 </body>
