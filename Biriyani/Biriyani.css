@@ -331,8 +331,8 @@ nav{
 @media (width > 768px){
   nav{
     position: static;
-    padding: 2rem 1rem;
-    max-width: var(--max-width);
+    padding: 0.5rem 1rem;
+    max-width: 1350px;
     margin-inline: auto;
     display: flex;
     align-items: center;
