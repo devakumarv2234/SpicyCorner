@@ -695,6 +695,7 @@ nav{
 .footer__container {
   grid-template-columns: 3fr 2fr;
 }
+
 }
 @media (width > 768px){
   nav{
@@ -740,6 +741,7 @@ nav{
     font-size: 1.5rem;
     border-radius: 100%;
   }
+
   .header-container{
     grid-template-columns: 2fr 3fr;
     align-items: center;

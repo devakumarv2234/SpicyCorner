@@ -297,3 +297,4 @@ function clearCart() {
 }
 // Update cart on page load
 window.onload = updateCart;
+

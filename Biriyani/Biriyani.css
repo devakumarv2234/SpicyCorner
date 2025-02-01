@@ -460,55 +460,50 @@ nav {
 
 
 @media (width > 768px) {
-  nav {
+  nav{
     position: static;
-    padding: 0.5rem 1rem;
-    max-width: 1350px;
+    padding: 2rem 1rem;
+    max-width: var(--max-width);
     margin-inline: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
   }
-
-  .nav-header {
+  .nav-header{
     flex: 1;
     padding: 0;
     background-color: transparent;
   }
-
-  .nav-logo a {
+  .nav-logo a{
     color: var(--primary-color);
   }
-
-  .nav-menu-btn {
+  .nav-menu-btn{
     display: none;
   }
-
-  .nav-links {
+  .nav-links{
     position: static;
     padding: 0;
     flex-direction: row;
     background-color: transparent;
     transform: none;
   }
-
-  .nav-links a {
+  .nav-links a{
     color: var(--text-dark);
   }
-
-  .nav-links a:hover {
+  .nav-links a:hover{
     color: var(--primary-color);
   }
-
-  .nav-btn {
+  .nav-btn{
     display: flex;
     flex: 1;
   }
-
-  .nav-btn .btn {
+  .nav-btn .btn{
     padding: 8px 10px;
     font-size: 1.5rem;
     border-radius: 100%;
   }
 }
+@media (width > 540px){
+  
+  }
