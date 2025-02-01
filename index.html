@@ -49,14 +49,22 @@
     
     
     <div class="nav-btn">
-      <button class="btn" onclick="window.location.href='#'">
+      <button class="btn" onclick="document.getElementById('cart-modal').style.display='block'">
         <i class="ri-shopping-bag-fill"></i>
         <span id="cart-item-count">0</span>
       </button>
-      
     </div>
-        
   </nav>
+
+  <div id="cart-overlay" onclick="toggleCart()"></div>
+  <!-- Cart Sidebar (Right Side) -->
+  <div id="cart-container">
+    <button class="close-btn" onclick="toggleCart()">X</button>
+    <h2>Your Items</h2>
+    <div id="cart-items"></div>
+    <button onclick="clearCart()">Clear</button>
+  </div>
+
   
 
   <header class="section-container header-container" id="home">
@@ -137,8 +145,6 @@
           <button class="btn">Add to Cart</button>
         </div>
       </div>
-      
-
     </div>
 
 
@@ -266,7 +272,7 @@
                 I always turn to FoodMan for a quick and delicious meal. Their
                 efficient service and mouthwatering options never disappoint!
               </p>
-              <img src=".\images\client-2.jpg" alt="client" />
+              <img src=".\images\client-2.png" alt="client" />
               <h4>Pugal S</h4>
               <h5>Food Blogger</h5>
             </div>

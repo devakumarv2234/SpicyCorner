@@ -149,3 +149,151 @@ window.onload = updateCart;
 
 
 
+function addToCart(productName, price, discount, imageUrl) {
+  const discountedPrice = price - (price * discount) / 100;
+  let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+  // Check if the item already exists in the cart
+  let existingItem = cartItems.find(item => item.productName === productName);
+
+  if (existingItem) {
+    existingItem.quantity++;  // Increase quantity if already added
+  } else {
+    cartItems.push({ productName, discountedPrice, imageUrl, quantity: 1 });
+  }
+
+  // Save updated cart to localStorage
+  localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+  // Update cart UI
+  updateCart();
+
+  // Show alert (optional)
+  alert(`${productName} added to cart!`);
+}
+function navigateToDetails(name, description, price, discount, imageUrl) {
+  const discountedPrice = price - (price * discount) / 100;
+  const detailsURL = `details.html?name=${encodeURIComponent(name)}&description=${encodeURIComponent(description)}&price=${price}&discount=${discount}&discountedPrice=${discountedPrice.toFixed(2)}&imageUrl=${encodeURIComponent(imageUrl)}`;
+  window.location.href = detailsURL;
+}
+
+ // Function to add an item to the cart
+ function addToCart(productName, price, discount, imageUrl) {
+  const discountedPrice = price - (price * discount) / 100;
+  let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+  // Check if the item already exists in the cart
+  let existingItem = cartItems.find(item => item.productName === productName);
+
+  if (existingItem) {
+    existingItem.quantity++;  // Increase quantity if already added
+  } else {
+    cartItems.push({ productName, discountedPrice, imageUrl, quantity: 1 });
+  }
+
+  // Save updated cart to localStorage
+  localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+  // Update cart UI
+  updateCart();
+
+  // Show alert (optional)
+  alert(`${productName} added to cart!`);
+}
+
+// Function to update the cart UI
+function updateCart() {
+  let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+  const cartItemCountElement = document.querySelector('.nav-btn .btn span');
+  const cartItemsContainer = document.getElementById('cart-items');
+
+  // Update cart count in navbar
+  let totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+  cartItemCountElement.textContent = totalItems;
+
+  // Clear existing cart display
+  cartItemsContainer.innerHTML = "";
+
+  if (cartItems.length === 0) {
+    cartItemsContainer.innerHTML = "<p>Cart is empty</p>";
+    return;
+  }
+
+  // Display each item in the cart
+  cartItems.forEach((item, index) => {
+    cartItemsContainer.innerHTML += `
+  <div class="cart-item">
+    <div class="cart-item-details">
+      <img src="${item.imageUrl}" alt="Cart Item" width="50" height="50">
+      <span>${item.productName}</span>
+      <span>₹${item.discountedPrice}</span>
+    </div>
+    <div class="cart-item-actions">
+      
+      <button onclick="increaseQty(${index})">+</button>
+      <span> ${item.quantity}</span>
+      <button onclick="decreaseQty(${index})">-</button>
+      
+    </div>
+  </div>
+`;
+  });
+
+}
+
+// Function to increase item quantity
+function increaseQty(index) {
+  let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+  cartItems[index].quantity++;
+  localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  updateCart();
+}
+
+// Function to decrease item quantity
+function decreaseQty(index) {
+  let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+  if (cartItems[index].quantity > 1) {
+    cartItems[index].quantity--;
+  } else {
+    cartItems.splice(index, 1); // Remove if quantity is 0
+  }
+
+  localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  updateCart();
+}
+
+// Function to remove an item from the cart
+function removeFromCart(index) {
+  let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+  cartItems.splice(index, 1);
+  localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  updateCart();
+}
+function toggleCart() {
+  const cartContainer = document.getElementById('cart-container');
+  const cartOverlay = document.getElementById('cart-overlay');
+
+  cartContainer.classList.toggle('active');
+  cartOverlay.classList.toggle('active');
+}
+
+// Open cart when clicking the cart button
+document.querySelector('.nav-btn .btn').addEventListener('click', function () {
+  toggleCart();
+});
+
+function clearCart() {
+  // Remove all cart items from localStorage
+  localStorage.removeItem('cartItems');
+
+  // Reset cart count in navbar
+  const cartItemCountElement = document.querySelector('.nav-btn .btn span');
+  cartItemCountElement.textContent = 0;
+
+  // Clear the cart display
+  const cartItemsContainer = document.getElementById('cart-items');
+  cartItemsContainer.innerHTML = "<p>Cart is empty</p>";
+}
+// Update cart on page load
+window.onload = updateCart;
