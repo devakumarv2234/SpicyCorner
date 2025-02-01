@@ -454,18 +454,23 @@ nav {
   color: #fff;
   padding: 5px;
   cursor: pointer;
-  ;
+  
 }
 
 @media (max-width: 540px) {
   .category-title {
     padding-top: 3rem;
   }
-  .card{
+  .card {
     width: 250px;
     height: 350px;
+    display: flex;            /* Enables flex inside card */
+    justify-content: center;  /* Centers content horizontally */
+    align-items: center;      /* Centers content vertically */
+    margin: 0 auto;           /* Centers the card if it's a block element */
   }
- }
+  }
+ 
 @media (width > 768px) {
   nav{
     position: static;
