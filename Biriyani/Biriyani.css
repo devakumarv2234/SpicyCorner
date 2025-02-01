@@ -22,7 +22,6 @@ body {
   padding: 30px;
   max-width: 1300px;
   background: var(--white);
-
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.384);
 }
 
@@ -30,7 +29,7 @@ body {
   font-size: 28px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 40px;
+  padding-bottom: 2rem;
   color: var(--primary-color);
 }
 
@@ -458,12 +457,16 @@ nav {
   ;
 }
 
-
+@media (max-width: 540px) {
+  .category-title {
+    padding-top: 3rem;
+  }
+}
 @media (width > 768px) {
   nav{
     position: static;
     padding: 2rem 1rem;
-    max-width: var(--max-width);
+    max-width: 1350px;
     margin-inline: auto;
     display: flex;
     align-items: center;
