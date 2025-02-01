@@ -461,7 +461,11 @@ nav {
   .category-title {
     padding-top: 3rem;
   }
-}
+  .card{
+    width: 250px;
+    height: 350px;
+  }
+ }
 @media (width > 768px) {
   nav{
     position: static;
