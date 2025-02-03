@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-header">
+          <div class="logo nav-logo">
+            <a href="#">Spicy<span>Corner</span></a>
+          </div>
+          <div class="nav-menu-btn" id="menu-btn">
+           <span><i class="ri-menu-line"></i></span>
+          </div>
+    
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#special">Special</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="./Signin.html">Login</a></li>
+          
+          <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search here..." />
+            <button onclick="searchFunction()">Search</button>
+          </div>
+          
+          <div class="dropdown">
+            <button class="dropdown-btn">Categories <i class="ri-arrow-down-s-line"></i></button>
+            <div class="dropdown-content">
+              <a href="./Biriyani.html" class="category-link" data-category="biriyani">Biriyani</a>
+              <a href="./Cakes.html" class="category-link" data-category="cakes">Cakes</a>
+              <a href="#kfc" class="category-link" data-category="kfc">KFC</a>
+              <a href="#fried-rice" class="category-link" data-category="fried-rice">Fried Rice</a>
+            </div> 
+          </div>
+        </ul>
+        
+        
+        <div class="nav-btn">
+          <button class="btn" onclick="document.getElementById('cart-modal').style.display='block'">
+            <i class="ri-shopping-bag-fill"></i>
+            <span id="cart-item-count">0</span>
+          </button>
+        </div>
+      </nav>
+</body>
+</html>

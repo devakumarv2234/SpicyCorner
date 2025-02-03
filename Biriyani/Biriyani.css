@@ -5,21 +5,195 @@
   --text-dark: #18181b;
   --text-light: #6b7280;
   --white: #ffffff;
+  --max-width: 1350px;
 }
 
-* {
+*{
+  margin: 0;
+  padding: 0;
   font-family: "Montagu Slab", sans-serif;
 }
 
-body {
-  margin: 0;
-  padding: 0;
+.logo a{
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.logo a span{
+  color: var(--text-dark);
+}
+img{
+  display: flex;
+  width: 100%;
+}
+a{
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+ul{
+  list-style: none;
+}
+body{
+  scroll-behavior: smooth;
+}
+nav{
+  position: fixed;
+  isolation: isolate;
+  width: 100%;
+  z-index: 9;
+}
+.nav-header{
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+}
+.nav-logo a{
+  color: var(--white);
+}
+.nav-menu-btn{
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+.nav-links{
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--primary-color-light);
+  transition: 0.5s;
+  z-index: -1;
+  transform: translateY(-100%);
+}
+.nav-links.open{
+  transform: translateY(0);
+}
+.nav-links a{
+  font-weight: 500;
+  color: var(--primary-color);
+
+}
+.nav-links a:hover{
+  color: var(--text-dark);
+}
+.nav-btn{
+  display: none;
+  position: relative;
+}
+.nav-btn span{
+  background-color: #18181b;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  padding: 5px 8px;
+  font-size: 16px;
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  background-color: transparent;
+  padding: 8px 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+  border: none;
+}
+
+.dropdown-btn:hover {
+  color: var(--primary-color-dark);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  overflow: hidden;
+  z-index: 10;
+  border-radius: 5px;
+  min-width: 180px; /* Ensures width adapts */
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
   background-color: var(--primary-color-light);
 }
 
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-bar input[type="text"] {
+  width: 200px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar input[type="text"]:focus {
+  border-color: var(--primary-color);
+}
+
+.search-bar button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: var(--primary-color-dark);
+}
+
 .category {
-  margin: 20px auto;
-  padding: 30px;
+  margin: 0 auto;
+  padding: 55px;
   max-width: 1300px;
   background: var(--white);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.384);
@@ -137,203 +311,6 @@ body {
 
 span {
   color: var(--text-dark);
-}
-
-.logo a {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary-color);
-}
-
-.logo a span {
-  color: var(--text-dark);
-}
-
-img {
-  display: flex;
-  width: 100%;
-}
-
-a {
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-ul {
-  list-style: none;
-}
-
-body {
-  scroll-behavior: smooth;
-}
-
-nav {
-  position: fixed;
-  isolation: isolate;
-  z-index: 9;
-}
-
-.nav-header {
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--primary-color);
-}
-
-.nav-logo a {
-  color: var(--white);
-}
-
-.nav-menu-btn {
-  font-size: 1.5rem;
-  color: var(--white);
-  cursor: pointer;
-}
-
-.nav-links {
-  position: absolute;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  padding: 2rem;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: right;
-  flex-direction: column;
-  gap: 2rem;
-  background-color: var(--primary-color-light);
-  transition: 0.5s;
-  z-index: -1;
-  transform: translateY(-100%);
-}
-
-.nav-links.open {
-  transform: translateY(0);
-}
-
-.nav-links a {
-  font-weight: 500;
-  color: var(--primary-color);
-
-}
-
-.nav-links a:hover {
-  color: var(--text-dark);
-}
-
-.nav-btn {
-  display: none;
-  position: relative;
-}
-
-.nav-btn span {
-  background-color: #18181b;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--white);
-  position: absolute;
-  top: -5px;
-  left: 50%;
-  padding: 5px 8px;
-  font-size: 16px;
-}
-
-
-/* Dropdown Styling */
-.dropdown {
-  position: relative;
-  z-index: 100;
-}
-
-.dropdown-btn {
-  background-color: transparent;
-  /* Remove background color */
-  padding: 8px 12px;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  color: var(--text-dark);
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  transition: color 0.3s ease;
-  /* Update hover effect to color change only */
-  border: none;
-  /* Remove border */
-}
-
-.dropdown-btn:hover {
-  color: var(--primary-color-dark);
-  /* Change text color on hover */
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  overflow: hidden;
-  z-index: 10;
-  border-radius: 5px;
-  /* Optional: Keep or remove if no rounding is desired */
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 10px 15px;
-  color: var(--text-dark);
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.dropdown-content a:hover {
-  background-color: var(--primary-color-light);
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-
-/* Search Bar */
-.search-bar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.search-bar input[type="text"] {
-  width: 200px;
-  padding: 8px 12px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  outline: none;
-  transition: border-color 0.3s ease;
-}
-
-.search-bar input[type="text"]:focus {
-  border-color: var(--primary-color);
-}
-
-.search-bar button {
-  background-color: var(--primary-color);
-  color: var(--white);
-  border: none;
-  padding: 8px 16px;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.search-bar button:hover {
-  background-color: var(--primary-color-dark);
 }
 
 .btn {
@@ -464,10 +441,10 @@ nav {
   .card {
     width: 250px;
     height: 350px;
-    display: flex;            /* Enables flex inside card */
-    justify-content: center;  /* Centers content horizontally */
-    align-items: center;      /* Centers content vertically */
-    margin: 0 auto;           /* Centers the card if it's a block element */
+    display: flex;            
+    justify-content: center;  
+    align-items: center;      
+    margin: 0 auto;           
   }
   }
  
@@ -475,12 +452,13 @@ nav {
   nav{
     position: static;
     padding: 2rem 1rem;
-    max-width: 1350px;
+    max-width: var(--max-width);
     margin-inline: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+    
   }
   .nav-header{
     flex: 1;
@@ -515,7 +493,36 @@ nav {
     font-size: 1.5rem;
     border-radius: 100%;
   }
-}
-@media (width > 540px){
   
+}
+@media screen and (max-width: 768px) {
+  .dropdown-content {
+    position: fixed; /* Position dropdown content in the normal flow */
+    display: none; /* Hide by default */
+    width: 100%; /* Make it take full width of the parent */
+    background-color: var(--primary-color-light);
+    border-radius: 0;
+    min-width: 0; /* Remove fixed min-width */
   }
+
+  /* When dropdown button is clicked, display the content */
+  .dropdown.open .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-btn {
+    width: 100%; /* Make the dropdown button take full width */
+    text-align: left;
+    color: var(--primary-color);
+  }
+
+  /* Add a small margin for the dropdown items */
+  .dropdown-content a {
+    display: flex;
+    justify-content: center;
+    color: var(--primary-color-dark);
+  }
+  .search-bar{
+    display: none;
+  }
+}

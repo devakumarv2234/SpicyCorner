@@ -70,7 +70,6 @@ body{
   scroll-behavior: smooth;
 }
 nav{
-  
   position: fixed;
   isolation: isolate;
   width: 100%;
@@ -138,14 +137,13 @@ nav{
   font-size: 16px;
 }
 
-
 /* Dropdown Styling */
 .dropdown {
   position: relative;
 }
 
 .dropdown-btn {
-  background-color: transparent; /* Remove background color */
+  background-color: transparent;
   padding: 8px 12px;
   font-size: 1rem;
   font-weight: 500;
@@ -154,12 +152,12 @@ nav{
   display: flex;
   align-items: center;
   gap: 5px;
-  transition: color 0.3s ease; /* Update hover effect to color change only */
-  border: none; /* Remove border */
+  transition: color 0.3s ease;
+  border: none;
 }
 
 .dropdown-btn:hover {
-  color: var(--primary-color-dark); /* Change text color on hover */
+  color: var(--primary-color-dark);
 }
 
 .dropdown-content {
@@ -170,7 +168,8 @@ nav{
   background-color: #fff;
   overflow: hidden;
   z-index: 10;
-  border-radius: 5px; /* Optional: Keep or remove if no rounding is desired */
+  border-radius: 5px;
+  min-width: 180px; /* Ensures width adapts */
 }
 
 .dropdown-content a {
@@ -188,7 +187,6 @@ nav{
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
 
 /* Search Bar */
 .search-bar {
@@ -696,9 +694,10 @@ nav{
   grid-template-columns: 3fr 2fr;
 }
 
+
 }
 @media (width > 768px){
-  nav{
+    nav{
     position: static;
     padding: 2rem 1rem;
     max-width: var(--max-width);
@@ -707,6 +706,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+    
   }
   .nav-header{
     flex: 1;
@@ -720,6 +720,7 @@ nav{
     display: none;
   }
   .nav-links{
+    margin-top: 30px;
     position: static;
     padding: 0;
     flex-direction: row;
@@ -808,7 +809,7 @@ nav{
   .footer__container {
     grid-template-columns: 2fr repeat(3, 1fr);
   }
-
+  
 
 }
 
@@ -828,5 +829,37 @@ nav{
 
   .chef__bg {
     max-width: 375px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dropdown-content {
+    position: fixed; /* Position dropdown content in the normal flow */
+    display: none; /* Hide by default */
+    width: 100%; /* Make it take full width of the parent */
+    background-color: var(--primary-color-light);
+    border-radius: 0;
+    min-width: 0; /* Remove fixed min-width */
+  }
+
+  /* When dropdown button is clicked, display the content */
+  .dropdown.open .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-btn {
+    width: 100%; /* Make the dropdown button take full width */
+    text-align: left;
+    color: var(--primary-color);
+  }
+
+  /* Add a small margin for the dropdown items */
+  .dropdown-content a {
+    display: flex;
+    justify-content: center;
+    color: var(--primary-color-dark);
+  }
+  .search-bar{
+    display: none;
   }
 }

@@ -26,7 +26,6 @@
       <div class="nav-menu-btn" id="menu-btn">
         <span><i class="ri-menu-line"></i></span>
       </div>
-
     </div>
     <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -392,7 +391,8 @@
             Mumbai.</div>
           <div class="price"><span>Price:</span> ₹300</div>
           <div class="offer"> 20% off!</div>
-          <button class="buy-button" onclick="event.stopPropagation(); addToCart('Bombil Fry', 300, 20, './images/F8.png')">Buy Now</button>
+          <button class="buy-button"
+            onclick="event.stopPropagation(); addToCart('Bombil Fry', 300, 20, './images/F8.png')">Buy Now</button>
         </div>
       </div>
     </div>
@@ -400,27 +400,43 @@
 
 
   <script>
+
+    const menuBtn = document.getElementById("menu-btn");
+    const navLinks = document.getElementById("nav-links");
+    const menuBtnIcon = menuBtn.querySelector("i");
+
+    menuBtn.addEventListener("click", (e) => {
+      navLinks.classList.toggle("open");
+
+      const isOpen = navLinks.classList.contains("open");
+      menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
+    });
+
+    navLinks.addEventListener("click", (e) => {
+      navLinks.classList.remove("open");
+      menuBtnIcon.setAttribute("class", "ri-menu-line");
+    });
     function searchFunction() {
       const query = document.getElementById('searchInput').value.trim().toLowerCase(); // Get the search query and convert it to lowercase
       const categoryLinks = document.querySelectorAll('.category-link'); // Select all category links
-      
+
       let found = false;
-    
+
       categoryLinks.forEach(link => {
         const categoryName = link.textContent.toLowerCase(); // Get the text content of each category link
-    
+
         // If the category name matches the search query
         if (categoryName.includes(query)) {
           found = true;
           window.location.href = link.getAttribute('href'); // Redirect to the category link URL
         }
       });
-    
+
       if (!found && query) {
         alert('No categories found matching "' + query + '"'); // Display an alert if no categories match the search query
       }
     }
-    
+
 
     function navigateToDetails(name, description, price, discount, imageUrl) {
       const discountedPrice = price - (price * discount) / 100;
@@ -428,8 +444,8 @@
       window.location.href = detailsURL;
     }
 
-     // Function to add an item to the cart
-     function addToCart(productName, price, discount, imageUrl) {
+    // Function to add an item to the cart
+    function addToCart(productName, price, discount, imageUrl) {
       const discountedPrice = price - (price * discount) / 100;
       let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 

@@ -77,7 +77,8 @@
           <div class="price"><span>Price:</span> ₹500</div>
           <div class="offer">15% off!</div>
           <button class="buy-button"
-            onclick="event.stopPropagation(); addToCart('Chocolate Truffle Cake', 500, 15, './images/c1.png')">Buy Now</button>
+            onclick="event.stopPropagation(); addToCart('Chocolate Truffle Cake', 500, 15, './images/c1.png')">Buy
+            Now</button>
         </div>
       </div>
 
@@ -103,7 +104,8 @@
           </div>
           <div class="price"><span>Price:</span> ₹550</div>
           <div class="offer">10% off!</div>
-          <button class="buy-button" onclick="event.stopPropagation(); addToCart('Black Forest Cake', 550, 10, './images/c3.png')">Buy
+          <button class="buy-button"
+            onclick="event.stopPropagation(); addToCart('Black Forest Cake', 550, 10, './images/c3.png')">Buy
             Now</button>
         </div>
       </div>
@@ -116,7 +118,8 @@
           <div class="card-description">Light and fluffy cake infused with pineapple flavor cream.</div>
           <div class="price"><span>Price:</span> ₹450</div>
           <div class="offer">12% off!</div>
-          <button class="buy-button" onclick="event.stopPropagation(); addToCart('Pineapple Cake', 450, 12, './images/c4.png')">Buy
+          <button class="buy-button"
+            onclick="event.stopPropagation(); addToCart('Pineapple Cake', 450, 12, './images/c4.png')">Buy
             Now</button>
         </div>
       </div>
@@ -129,7 +132,8 @@
           <div class="card-description">Rich and creamy cheesecake with a buttery biscuit crust and tasty..</div>
           <div class="price"><span>Price:</span> ₹700</div>
           <div class="offer">10% off!</div>
-          <button class="buy-button" onclick="event.stopPropagation(); addToCart('Cheesecake', 700, 10, './images/c5.png')">Buy
+          <button class="buy-button"
+            onclick="event.stopPropagation(); addToCart('Cheesecake', 700, 10, './images/c5.png')">Buy
             Now</button>
         </div>
       </div>
@@ -142,7 +146,8 @@
           <div class="card-description">A decadent chocolate cake with rich fudge layers and creamy frosting.</div>
           <div class="price"><span>Price:</span> ₹520</div>
           <div class="offer">10% off!</div>
-          <button class="buy-button" onclick="event.stopPropagation(); addToCart('Chocolate Fudge Cake', 520, 10, './images/c6.png')">Buy
+          <button class="buy-button"
+            onclick="event.stopPropagation(); addToCart('Chocolate Fudge Cake', 520, 10, './images/c6.png')">Buy
             Now</button>
         </div>
       </div>
@@ -156,7 +161,8 @@
           <div class="card-description">A moist cake infused with coffee flavor and topped with crunchy walnuts.</div>
           <div class="price"><span>Price:</span> ₹480</div>
           <div class="offer">12% off!</div>
-          <button class="buy-button" onclick="event.stopPropagation(); addToCart('Coffee Walnut Cake', 480, 12, './images/c7.png')">Buy
+          <button class="buy-button"
+            onclick="event.stopPropagation(); addToCart('Coffee Walnut Cake', 480, 12, './images/c7.png')">Buy
             Now</button>
         </div>
       </div>
@@ -170,7 +176,8 @@
           <div class="card-description">A creamy cheesecake topped with fresh mango slice.</div>
           <div class="price"><span>Price:</span> ₹650</div>
           <div class="offer">15% off!</div>
-          <button class="buy-button" onclick="event.stopPropagation(); addToCart('Mango Cheesecake', 650, 15, './images/c8.png')">Buy
+          <button class="buy-button"
+            onclick="event.stopPropagation(); addToCart('Mango Cheesecake', 650, 15, './images/c8.png')">Buy
             Now</button>
         </div>
       </div>
@@ -184,7 +191,8 @@
           <div class="card-description">A healthy and delicious cake made with fresh carrots and walnuts.</div>
           <div class="price"><span>Price:</span> ₹500</div>
           <div class="offer">10% off!</div>
-          <button class="buy-button" onclick="event.stopPropagation(); addToCart('Carrot Walnut Cake', 500, 10, './images/c9.png')">Buy
+          <button class="buy-button"
+            onclick="event.stopPropagation(); addToCart('Carrot Walnut Cake', 500, 10, './images/c9.png')">Buy
             Now</button>
         </div>
       </div>
@@ -198,7 +206,8 @@
           <div class="card-description">A classic Italian dessert with layers of coffee-soaked sponge.</div>
           <div class="price"><span>Price:</span> ₹750</div>
           <div class="offer">15% off!</div>
-          <button class="buy-button" onclick="event.stopPropagation(); addToCart('Tiramisu Cake', 750, 15, './images/c10.png')">Buy
+          <button class="buy-button"
+            onclick="event.stopPropagation(); addToCart('Tiramisu Cake', 750, 15, './images/c10.png')">Buy
             Now</button>
         </div>
       </div>
@@ -211,7 +220,8 @@
           <div class="card-description">A light sponge cake layered with fresh strawberries and cream.</div>
           <div class="price"><span>Price:</span> ₹550</div>
           <div class="offer">10% off!</div>
-          <button class="buy-button" onclick="event.stopPropagation(); addToCart('Strawberry Shortcake', 550, 10, './images/c11.png')">Buy
+          <button class="buy-button"
+            onclick="event.stopPropagation(); addToCart('Strawberry Shortcake', 550, 10, './images/c11.png')">Buy
             Now</button>
         </div>
       </div>
@@ -222,27 +232,43 @@
 
   <script>
 
+    const menuBtn = document.getElementById("menu-btn");
+    const navLinks = document.getElementById("nav-links");
+    const menuBtnIcon = menuBtn.querySelector("i");
+
+    menuBtn.addEventListener("click", (e) => {
+      navLinks.classList.toggle("open");
+
+      const isOpen = navLinks.classList.contains("open");
+      menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
+    });
+
+    navLinks.addEventListener("click", (e) => {
+      navLinks.classList.remove("open");
+      menuBtnIcon.setAttribute("class", "ri-menu-line");
+    });
+
     function searchFunction() {
       const query = document.getElementById('searchInput').value.trim().toLowerCase(); // Get the search query and convert it to lowercase
       const categoryLinks = document.querySelectorAll('.category-link'); // Select all category links
-      
+
       let found = false;
-    
+
       categoryLinks.forEach(link => {
         const categoryName = link.textContent.toLowerCase(); // Get the text content of each category link
-    
+
         // If the category name matches the search query
         if (categoryName.includes(query)) {
           found = true;
           window.location.href = link.getAttribute('href'); // Redirect to the category link URL
         }
       });
-    
+
       if (!found && query) {
         alert('No categories found matching "' + query + '"'); // Display an alert if no categories match the search query
       }
     }
-    
+
     // Function to add an item to the cart
     function addToCart(productName, price, discount, imageUrl) {
       const discountedPrice = price - (price * discount) / 100;
