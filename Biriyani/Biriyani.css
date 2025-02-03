@@ -54,6 +54,7 @@ nav{
   color: var(--white);
 }
 .nav-menu-btn{
+  margin-right: 5%;
   font-size: 1.5rem;
   color: var(--white);
   cursor: pointer;
@@ -403,7 +404,7 @@ span {
 
 .cart-item-details img {
   width: 70px;
-  height: 40px;
+  height: 50px;
   object-fit: cover;
   /* Prevent image distortion */
   margin-right: 10px;
@@ -446,7 +447,8 @@ span {
     align-items: center;      
     margin: 0 auto;           
   }
-  }
+  
+}
  
 @media (width > 768px) {
   nav{

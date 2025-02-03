@@ -720,7 +720,6 @@ nav{
     display: none;
   }
   .nav-links{
-    margin-top: 30px;
     position: static;
     padding: 0;
     flex-direction: row;
