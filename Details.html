@@ -24,7 +24,7 @@
         const price = getQueryParam('price');
         const discount = getQueryParam('discount');
         const discountedPrice = getQueryParam('discountedPrice');
-        const imageUrl = getQueryParam('imageUrl');  // Correctly retrieve imageUrl
+        const imageUrl = getQueryParam('./imageUrl');  // Correctly retrieve imageUrl
 
         document.getElementById('details-title').textContent = name;
         document.getElementById('details-description').textContent = description;
